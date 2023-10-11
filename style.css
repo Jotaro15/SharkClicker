@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    margin: 0%;
+    background-image: url('./Images/background.jpg');
+    background-size: cover;
+
+}
+
+.container {
+    text-align: center;
+}
+
+#shark {
+    width: 350px;
+    height: 350px;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+#click-counter {
+    font-size: 40px;
+    font-family: fantasy;
+    color: black;
+}
+
+#click-display {
+    position: absolute;
+}
+
+
