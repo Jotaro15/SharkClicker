@@ -1,39 +1,56 @@
 let clickCount = 0;
+let bonusPoints = 1; 
+let bonusCost = 10; 
+let bonusPurchases = 0; 
 
 const cookie = document.getElementById("shark");
 const clickCounter = document.getElementById("click-counter");
 const clickDisplay = document.getElementById("click-display");
+const bonusButton = document.getElementById("bonus-button");
 
-cookie.addEventListener("click", () => {
-    clickCount++;
+function clickCookie() {
+    clickCount += bonusPoints;
     clickCounter.textContent = clickCount;
     cookie.style.transform = "scale(1.1)";
     setTimeout(() => {
         cookie.style.transform = "scale(1)";
     }, 200);
+}
 
-    const clickText = document.createElement("div");
-    clickText.textContent = "+1";
-    clickText.style.position = "absolute";
-    clickText.style.left = `${event.clientX}px`;
-    clickText.style.top = `${event.clientY}px`;
-    clickDisplay.appendChild(clickText);
-    setTimeout(() => {
-        clickDisplay.removeChild(clickText);
-    }, 1000);
-});
+function activateBonus() {
+    if (clickCount >= bonusCost) {
+        clickCount -= bonusCost;
+        bonusCost = Math.ceil(bonusCost * 1.5);
+        bonusPoints++;
+        bonusPurchases++;
+        bonusButton.textContent = `Bonus (+${bonusPoints}) - Coût : ${bonusCost} points`;
+    }
+}
 
 cookie.addEventListener("mouseover", () => {
     cookie.style.boxShadow = "0 0 7px rgba(0, 0, 0, 0.3)";
-    cookie.style.borderRadius = "50%"; // Ajoutez cette ligne pour créer un cercle
+    cookie.style.borderRadius = "50%";
 });
 
 cookie.addEventListener("mouseout", () => {
     cookie.style.boxShadow = "none";
-    cookie.style.borderRadius = "0"; // Réinitialisez le border-radius pour supprimer la forme de cercle
+    cookie.style.borderRadius = "0";
 });
 
 
-
-
-
+var counter = 10;
+var intervalId = null;
+function finish() {
+  clearInterval(intervalId);
+  document.getElementById("bip").innerHTML = "TERMINE!";	
+}
+function bip() {
+    counter--;
+    if(counter == 0) finish();
+    else {	
+        document.getElementById("bip").innerHTML = counter + " secondes restantes";
+    }	
+}
+function start(){
+  intervalId = setInterval(bip, 1000);
+}	

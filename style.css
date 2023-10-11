@@ -4,6 +4,7 @@ body {
     align-items: center;
     height: 80%;
     margin: 0%;
+    cursor: url('./Images/pink_shark.png');
     background-image: url('./Images/background.jpg');
     background-size: cover;
 
@@ -17,7 +18,7 @@ body {
     width: 350px;
     height: 350px;
     cursor: pointer;
-    transition: transform 0.1s, box-shadow 0.1s;
+    transition: transform 0.1s;
 }
 
 #click-counter {
@@ -30,4 +31,29 @@ body {
     position: absolute;
 }
 
+#bonus-button{
+    background-color: #f294cb;
+    border: 2px solid #f6ffa5;
+    border-radius: 15px;
+    color: #f6ffa5;
+    text-align: center;
+    font-size: 22px;
+}
 
+#bonus-button:hover{
+    background-color: #f294cb;
+    border: 2px solid #f6ffa5;
+    box-shadow: 5px 4px 4px #042182;
+    color: #f6ffa5;
+    text-align: center;
+    font-size: 22px;
+}
+
+#bonus-button:click{
+    background-color: #f6ffa5;
+    border: 2px solid #f294cb;
+    box-shadow: 10px 5px 5px #042182;
+    color: #f294cb;
+    text-align: center;
+    font-size: 22px;
+}
