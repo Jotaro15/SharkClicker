@@ -1,7 +1,7 @@
 body {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:flex-end;
     height: 80%;
     margin: 0%;
     cursor: url('./Images/pink_shark.png');
@@ -10,28 +10,25 @@ body {
 
 }
 
-.container {
-    text-align: center;
+#Bulle_Requin{
+    display: flex;
+    justify-content: center;
 }
 
-#shark {
+#Requin_Rose {
     width: 350px;
     height: 350px;
     cursor: pointer;
     transition: transform 0.1s;
 }
 
-#click-counter {
+#Compteur {
     font-size: 40px;
     font-family: fantasy;
     color: black;
 }
 
-#click-display {
-    position: absolute;
-}
-
-#bonus-button{
+#Bouton_Bonus{
     background-color: #f294cb;
     border: 2px solid #f6ffa5;
     border-radius: 15px;
@@ -40,7 +37,7 @@ body {
     font-size: 22px;
 }
 
-#bonus-button:hover{
+#Bouton_Bonus:hover{
     background-color: #f294cb;
     border: 2px solid #f6ffa5;
     box-shadow: 5px 4px 4px #042182;
@@ -49,7 +46,7 @@ body {
     font-size: 22px;
 }
 
-#bonus-button:click{
+#Bouton_Bonus:active{
     background-color: #f6ffa5;
     border: 2px solid #f294cb;
     box-shadow: 10px 5px 5px #042182;

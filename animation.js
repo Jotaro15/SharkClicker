@@ -1,56 +1,80 @@
-let clickCount = 0;
-let bonusPoints = 1; 
-let bonusCost = 10; 
-let bonusPurchases = 0; 
+let Bulles = 0;
+let Bulles_Bonus = 1; 
+let Cout_Bonus = 10; 
 
-const cookie = document.getElementById("shark");
-const clickCounter = document.getElementById("click-counter");
+const Shark = document.getElementById("Requin_Rose");
+const Compteur = document.getElementById("Compteur");
 const clickDisplay = document.getElementById("click-display");
-const bonusButton = document.getElementById("bonus-button");
+const Bouton_Bonus = document.getElementById("Bouton_Bonus");
 
-function clickCookie() {
-    clickCount += bonusPoints;
-    clickCounter.textContent = clickCount;
-    cookie.style.transform = "scale(1.1)";
+let sharkIcon = "./Images/pink_shark.png";
+let megaShark_Cout = 100;
+let MegaShark_Multiplicateur = 10;
+
+function clickShark() {
+    if (sharkIcon === "./Images/red_shark.png") {
+        Bulles += Bulles_Bonus * MegaShark_Multiplicateur;
+    } else {
+        Bulles += Bulles_Bonus;
+    }
+    Compteur.textContent = Bulles;
+    Shark.style.transform = "scale(1.1)";
     setTimeout(() => {
-        cookie.style.transform = "scale(1)";
+        Shark.style.transform = "scale(1)";
     }, 200);
 }
 
-function activateBonus() {
-    if (clickCount >= bonusCost) {
-        clickCount -= bonusCost;
-        bonusCost = Math.ceil(bonusCost * 1.5);
-        bonusPoints++;
-        bonusPurchases++;
-        bonusButton.textContent = `Bonus (+${bonusPoints}) - Coût : ${bonusCost} points`;
+function Activation_Bonus() {
+    if (Bulles >= Cout_Bonus) {
+        Bulles -= Cout_Bonus;
+        Cout_Bonus = Math.ceil(Cout_Bonus * 1.5);
+        Bulles_Bonus++;
+        Bouton_Bonus.textContent = `Nouvelles dents : +${Bulles_Bonus} Coût : ${Cout_Bonus} points`;
     }
 }
 
-cookie.addEventListener("mouseover", () => {
-    cookie.style.boxShadow = "0 0 7px rgba(0, 0, 0, 0.3)";
-    cookie.style.borderRadius = "50%";
+Shark.addEventListener("mouseover", () => {
+    Shark.style.boxShadow = "0 0 7px rgba(0, 0, 0, 0.3)";
+    Shark.style.borderRadius = "50%";
 });
 
-cookie.addEventListener("mouseout", () => {
-    cookie.style.boxShadow = "none";
-    cookie.style.borderRadius = "0";
+Shark.addEventListener("mouseout", () => {
+    Shark.style.boxShadow = "none";
+    Shark.style.borderRadius = "0";
 });
 
-
-var counter = 10;
+var counter = 30;
 var intervalId = null;
+
 function finish() {
-  clearInterval(intervalId);
-  document.getElementById("bip").innerHTML = "TERMINE!";	
+    clearInterval(intervalId);
+    document.getElementById("Bonus_Chrono").innerHTML = "TERMINE!";
+
+    sharkIcon = "./Images/pink_shark.png";
+    Shark.src = sharkIcon;
 }
-function bip() {
+
+function Bonus_Chrono() {
     counter--;
-    if(counter == 0) finish();
-    else {	
-        document.getElementById("bip").innerHTML = counter + " secondes restantes";
-    }	
+    if (counter == 0) finish();
+    else {
+        document.getElementById("Bonus_Chrono").innerHTML = counter + " secondes restantes";
+    }
 }
-function start(){
-  intervalId = setInterval(bip, 1000);
-}	
+
+function start() {
+    if (Bulles >= megaShark_Cout) {
+        Bulles -= megaShark_Cout;
+        sharkIcon = "./Images/red_shark.png";
+        Shark.src = sharkIcon;
+        intervalId = setInterval(Bonus_Chrono, 1000);
+    }
+    else {
+        sharkIcon = "./Images/pink_shark.png";
+        Shark.src = sharkIcon;
+    }
+}
+
+
+
+

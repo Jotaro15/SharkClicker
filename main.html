@@ -6,18 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shark Clicker</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./Images/pink_shark.png" type="image/x-icon">
+    <link rel="icon" href="./Images/pink_shark.png">
 </head>
 
 <body>
-    <div class="container">
-        <h1 id="click-counter">0</h1>
-        <img id="shark" src="./Images/pink_shark.png" alt="shark" onclick="clickCookie()">
-        <button id="bonus-button" onclick="activateBonus()">Bonus</button>
+    <div class="Bulle_Requin">
+        <h1 id="Compteur">0</h1>
+        <img id="Requin_Rose" src="./Images/pink_shark.png" alt="Requin_Rose" onclick="clickShark()">
     </div>
-    <div id="click-display"></div>
-    <button onclick="start()">Lancer le décompte</button>
-<div id="bip" class="display"></div>
+    <div class="Menu_Bonus">
+        <button id="Bouton_Bonus" onclick="Activation_Bonus()">Nouvelles dents : +0 - Coût : 10 points`</button>
+        <button id="Bouton_Bonus" onclick="start()">Méga Shark !!!</button>
+    </div>
+<div id="Bonus_Chrono" class="display"></div>
 
     <script src="./animation.js"></script>
 </body>
