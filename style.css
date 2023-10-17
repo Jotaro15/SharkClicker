@@ -1,18 +1,19 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items:flex-end;
-    height: 80%;
-    margin: 0%;
-    cursor: url('./Images/pink_shark.png');
     background-image: url('./Images/background.jpg');
     background-size: cover;
-
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-#Bulle_Requin{
+.container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 #Requin_Rose {
@@ -26,23 +27,19 @@ body {
     font-size: 40px;
     font-family: fantasy;
     color: black;
-    text-align: center;
-    margin: 2%;
-    height:20%;
-    width:57%;
 }
 
-#Bouton_Bonus{
+#Bouton_Bonus {
     background-color: #f294cb;
     border: 2px solid #f6ffa5;
     border-radius: 15px;
     color: #f6ffa5;
     text-align: center;
     font-size: 22px;
-    margin: 2%;
-    height: 40%;
+    margin: 2% 0;
     width: 75%;
 }
+
 
 #Bouton_Bonus:hover{
     background-color: #f294cb;

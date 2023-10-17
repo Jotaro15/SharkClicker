@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shark Clicker</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./Images/pink_shark.png">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shark Clicker</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="icon" href="./Images/pink_shark.png">
+    </head>
 
-<body>
-    <div class="Bulle_Requin">
-        <h1 id="Compteur">0</h1>
-        <img id="Requin_Rose" src="./Images/pink_shark.png" alt="Requin_Rose" onclick="clickShark()">
-    </div>
-    <div class="Menu_Bonus">
-        <button id="Bouton_Bonus" onclick="Activation_Bonus()">Nouvelles dents : +0 - Coût : 10 points`</button>
-        <button id="Bouton_Bonus" onclick="start()">Méga Shark !!!</button>
-    </div>
-<div id="Bonus_Chrono" class="display"></div>
-
-    <script src="./animation.js"></script>
-</body>
+    <body>
+        <div class="container">
+            <div class="Bulle_Requin">
+                <h1 id="Compteur">0</h1>
+                <img id="Requin_Rose" src="./Images/pink_shark.png" alt="Requin_Rose" onclick="clickShark()">
+            </div>
+            <div class="Menu_Bonus">
+                <button id="Bouton_Bonus" onclick="Activation_Bonus()">Nouvelles dents : +0 - Coût : 10 points</button>
+                <button id="Bouton_Bonus" onclick="start()">Méga Shark !!!</button>
+            </div>
+        </div>
+        <div id="Bonus_Chrono" class="display"></div>
+        <script src="./animation.js"></script>
+    </body>
 
 </html>
