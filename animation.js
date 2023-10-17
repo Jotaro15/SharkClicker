@@ -1,3 +1,4 @@
+
 let Bulles = 0;
 let Bulles_Bonus = 1; 
 let Cout_Bonus = 10; 
@@ -50,14 +51,6 @@ Shark.addEventListener("mouseout", () => {
 var counter = 30;
 var intervalId = null;
 
-function finish() {
-    clearInterval(intervalId);
-    document.getElementById("Bonus_Chrono").innerHTML = "TERMINE!";
-
-    sharkIcon = "./Images/pink_shark.png";
-    Shark.src = sharkIcon;
-}
-
 function Bonus_Chrono() {
     counter--;
     if (counter == 0) finish();
@@ -79,6 +72,11 @@ function start() {
     }
 }
 
+function finish() {
+    clearInterval(intervalId);
+    document.getElementById("Bonus_Chrono").innerHTML = "TERMINE!";
 
-
+    sharkIcon = "./Images/pink_shark.png";
+    Shark.src = sharkIcon;
+}
 
