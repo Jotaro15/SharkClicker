@@ -26,6 +26,10 @@ body {
     font-size: 40px;
     font-family: fantasy;
     color: black;
+    text-align: center;
+    margin: 2%;
+    height:20%;
+    width:57%;
 }
 
 #Bouton_Bonus{
@@ -35,6 +39,9 @@ body {
     color: #f6ffa5;
     text-align: center;
     font-size: 22px;
+    margin: 2%;
+    height: 40%;
+    width: 75%;
 }
 
 #Bouton_Bonus:hover{

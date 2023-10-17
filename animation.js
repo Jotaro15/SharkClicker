@@ -11,13 +11,17 @@ let sharkIcon = "./Images/pink_shark.png";
 let megaShark_Cout = 100;
 let MegaShark_Multiplicateur = 10;
 
+setInterval(() => {
+    Compteur.textContent = Bulles;
+}, 10);
+
 function clickShark() {
     if (sharkIcon === "./Images/red_shark.png") {
         Bulles += Bulles_Bonus * MegaShark_Multiplicateur;
     } else {
         Bulles += Bulles_Bonus;
     }
-    Compteur.textContent = Bulles;
+    
     Shark.style.transform = "scale(1.1)";
     setTimeout(() => {
         Shark.style.transform = "scale(1)";
