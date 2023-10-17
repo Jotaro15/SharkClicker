@@ -13,3 +13,7 @@ Notre sujet nous a été donné dans l'après-midi du 03/10/23, et le rendu éta
 
 Dans le projet, on retrouve un Dossier "Images" contenant les 3 styles de requin qu'il est possible de débloquer dans le jeu (Rose, Rouge et Or), ainsi que le Background. À noter que toutes les images ont été faites par moi, via une tablette graphique. 
 On a ensuite les 3 fichiers de code : main.html, qui contient le HTML, style.css, qui contient le CSS et animation.js, qui continent le JAVASCRIPT. 
+
+## Technologies et languages utilisés
+
+Pour ce projet, l'utilisation du JavaScript était bien sûr obligatoire, et celle du HTML était donc nécéssaire. Le CSS a aussi été utilisé.

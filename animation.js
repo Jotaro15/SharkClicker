@@ -59,7 +59,7 @@ function Bonus_Chrono() {
     }
 }
 
-function start() {
+function Activation_MegaShark() {
     if (Bulles >= megaShark_Cout) {
         Bulles -= megaShark_Cout;
         sharkIcon = "./Images/red_shark.png";
