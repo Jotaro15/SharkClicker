@@ -7,6 +7,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: 'Lilita One', cursive;
 }
 
 .container {
@@ -14,6 +15,7 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    font-family: 'Lilita One', cursive;
 }
 
 #Requin_Rose {
@@ -26,6 +28,7 @@ body {
 #Compteur {
     font-size: 40px;
     color: black;
+    font-family: 'Lilita One', cursive;
 }
 
 #Bouton_Bonus {
@@ -37,6 +40,7 @@ body {
     font-size: 22px;
     margin: 2% 0;
     width: 75%;
+    font-family: 'Lilita One', cursive;
 }
 
 
@@ -47,6 +51,7 @@ body {
     color: #f6ffa5;
     text-align: center;
     font-size: 22px;
+    font-family: 'Lilita One', cursive;
 }
 
 #Bouton_Bonus:active{
@@ -56,4 +61,38 @@ body {
     color: #f294cb;
     text-align: center;
     font-size: 22px;
+    font-family: 'Lilita One', cursive;
+}
+
+#Bouton_AutoShark {
+    background-color: #f294cb;
+    border: 2px solid #f6ffa5;
+    border-radius: 15px;
+    color: #f6ffa5;
+    text-align: center;
+    font-size: 22px;
+    margin: 2% 0;
+    width: 75%;
+    font-family: 'Lilita One', cursive;
+}
+
+
+#Bouton_AutoShark:hover{
+    background-color: #f294cb;
+    border: 2px solid #f6ffa5;
+    box-shadow: 5px 4px 4px #042182;
+    color: #f6ffa5;
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Lilita One', cursive;
+}
+
+#Bouton_AutoShark:active{
+    background-color: #f6ffa5;
+    border: 2px solid #f294cb;
+    box-shadow: 10px 5px 5px #042182;
+    color: #f294cb;
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Lilita One', cursive;
 }
