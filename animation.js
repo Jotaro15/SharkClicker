@@ -11,6 +11,8 @@ let MegaShark_Multiplicateur = 10;
 let counter = 30;
 let intervalId = null;
 let isCountingDown = false;
+let AutoSharkCost = 100;
+let AutoSharkRate = 0;
 
 setInterval(() => {
     Compteur.textContent = Bulles;
@@ -75,7 +77,6 @@ function finish() {
 
 function Activation_MegaShark() {
     if (isCountingDown) {
-        // If the countdown is already running, reset it.
         finish();
     } else if (Bulles >= megaShark_Cout) {
         Bulles -= megaShark_Cout;
@@ -84,3 +85,47 @@ function Activation_MegaShark() {
         startCountdown();
     }
 }
+
+function activateAutoShark() {
+    if (Bulles >= AutoSharkCost) {
+        Bulles -= AutoSharkCost;
+        AutoSharkCost += 100;
+        AutoSharkRate += 1;
+        document.getElementById("Bouton_AutoShark").textContent = `AutoShark : +${AutoSharkRate} /sec - Coût : ${AutoSharkCost} bulles`;
+        startAutoShark();
+    }
+}
+let autoSharkInterval;
+
+function startAutoShark() {
+    autoSharkInterval = setInterval(() => {
+        Bulles += AutoSharkRate;
+    }, 1000);
+}
+startAutoShark();
+
+const SharkyImage = document.getElementById("SharkyImage");
+const SharkyReward = 100;
+let sharkyInterval;
+
+function showSharky() {
+    SharkyImage.style.display = "block";
+    randomPosition();
+}
+
+function hideSharky() {
+    SharkyImage.style.display = "none";
+}
+
+SharkyImage.addEventListener("click", () => {
+    Bulles += SharkyReward;
+    hideSharky();
+});
+
+function startSharkyInterval() {
+    sharkyInterval = setInterval(() => {
+        showSharky();
+    }, 30000);
+}
+
+startSharkyInterval();

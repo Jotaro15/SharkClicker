@@ -13,6 +13,10 @@
     </head>
 
     <body>
+        <div class="Sharky">
+            <img id="SharkyImage" src="./Images/Sharky.png" alt="Sharky" style="display: none;" title="Clique sur moi pour obtenir 100 bulles !">
+            <img id="Dark_Sharky" src="./Images/Dark_Sharky.png" title="Clique sur moi pour obtenir 100 bulles !">
+        </div>
         <div class="container">
             <div class="Bulle_Requin">
                 <h1 id="Compteur">0</h1>
@@ -21,7 +25,7 @@
             <div class="Menu_Bonus">
                 <button id="Bouton_Bonus" onclick="Activation_Bonus()">Nouvelles dents : +0 - Coût : 10 points</button>
                 <button id="Bouton_Bonus" onclick="Activation_MegaShark()">Méga Shark !!! : +10 - Coût : 100 points</button>
-                <button id="Bouton_AutoShark" onclick="Activation_AutoShark()">Auto Shark : +1/sec - Coût : 100 points</button>
+                <button id="Bouton_AutoShark" onclick="activateAutoShark()">AutoShark : +1 /sec - Coût : 100 bulles</button>
             </div>
         </div>
         <div id="Bonus_Chrono" class="display"></div>
