@@ -1,16 +1,16 @@
-
 let Bulles = 0;
-let Bulles_Bonus = 1; 
-let Cout_Bonus = 10; 
-
+let Bulles_Bonus = 1;
+let Cout_Bonus = 10;
 const Shark = document.getElementById("Requin_Rose");
 const Compteur = document.getElementById("Compteur");
-const clickDisplay = document.getElementById("click-display");
 const Bouton_Bonus = document.getElementById("Bouton_Bonus");
-
+const Bonus_ChronoDisplay = document.getElementById("Bonus_Chrono");
 let sharkIcon = "./Images/pink_shark.png";
 let megaShark_Cout = 100;
 let MegaShark_Multiplicateur = 10;
+let counter = 30;
+let intervalId = null;
+let isCountingDown = false;
 
 setInterval(() => {
     Compteur.textContent = Bulles;
@@ -22,7 +22,6 @@ function clickShark() {
     } else {
         Bulles += Bulles_Bonus;
     }
-    
     Shark.style.transform = "scale(1.1)";
     setTimeout(() => {
         Shark.style.transform = "scale(1)";
@@ -48,35 +47,40 @@ Shark.addEventListener("mouseout", () => {
     Shark.style.borderRadius = "0";
 });
 
-var counter = 30;
-var intervalId = null;
-
-function Bonus_Chrono() {
-    counter--;
-    if (counter == 0) finish();
-    else {
-        document.getElementById("Bonus_Chrono").innerHTML = counter + " secondes restantes";
-    }
+function updateBonusChronoDisplay() {
+    Bonus_ChronoDisplay.innerHTML = isCountingDown ? counter + " secondes restantes" : "TERMINE!";
 }
 
-function Activation_MegaShark() {
-    if (Bulles >= megaShark_Cout) {
-        Bulles -= megaShark_Cout;
-        sharkIcon = "./Images/red_shark.png";
-        Shark.src = sharkIcon;
-        intervalId = setInterval(Bonus_Chrono, 1000);
-    }
-    else {
-        sharkIcon = "./Images/pink_shark.png";
-        Shark.src = sharkIcon;
-    }
+function startCountdown() {
+    isCountingDown = true;
+    updateBonusChronoDisplay();
+    intervalId = setInterval(() => {
+        if (counter <= 0) {
+            finish();
+        } else {
+            counter--;
+            updateBonusChronoDisplay();
+        }
+    }, 1000);
 }
 
 function finish() {
     clearInterval(intervalId);
-    document.getElementById("Bonus_Chrono").innerHTML = "TERMINE!";
-
+    isCountingDown = false;
+    counter = 30;
+    updateBonusChronoDisplay();
     sharkIcon = "./Images/pink_shark.png";
     Shark.src = sharkIcon;
 }
 
+function Activation_MegaShark() {
+    if (isCountingDown) {
+        // If the countdown is already running, reset it.
+        finish();
+    } else if (Bulles >= megaShark_Cout) {
+        Bulles -= megaShark_Cout;
+        sharkIcon = "./Images/red_shark.png";
+        Shark.src = sharkIcon;
+        startCountdown();
+    }
+}

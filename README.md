@@ -16,4 +16,6 @@ On a ensuite les 3 fichiers de code : main.html, qui contient le HTML, style.css
 
 ## Technologies et languages utilisés
 
-Pour ce projet, l'utilisation du JavaScript était bien sûr obligatoire, et celle du HTML était donc nécéssaire. Le CSS a aussi été utilisé.
+Pour ce projet, l'utilisation du JavaScript était bien sûr obligatoire, et celle du HTML était donc nécéssaire. Le CSS a aussi été utilisé pour le style. L'utilisation de Visual Studio Code a été requise pour la visualisation du code, et de GitHub et de GitHub Desktop pour la publication Git du code, et les aperçu des modifications de celui-ci. 
+
+## 
