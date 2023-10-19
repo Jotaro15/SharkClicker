@@ -35,11 +35,17 @@ function clickShark() {
     } else {
         Bulles += Bulles_Bonus;
     }
+    if (Bulles >= 1000 && Shark_Image === "./Images/pink_shark.png") {
+        Shark_Image = "./Images/golden_shark.png";
+        Shark.src = Shark_Image;
+    }
+
     Shark.style.transform = "scale(1.1)";
     setTimeout(() => {
         Shark.style.transform = "scale(1)";
     }, 200);
 }
+
 
 /* Quand on clique sur le bouton bonus, il soustrait le nombre de bulles requis, ajoute le bonus par clique et actualise le cout du bonus */
 function Activation_Bonus() {

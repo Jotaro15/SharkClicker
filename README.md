@@ -18,4 +18,10 @@ On a ensuite les 3 fichiers de code : main.html, qui contient le HTML, style.css
 
 Pour ce projet, l'utilisation du JavaScript était bien sûr obligatoire, et celle du HTML était donc nécéssaire. Le CSS a aussi été utilisé pour le style. L'utilisation de Visual Studio Code a été requise pour la visualisation du code, et de GitHub et de GitHub Desktop pour la publication Git du code, et les aperçu des modifications de celui-ci. 
 
-## 
+## Points d'amélioration
+
+Dans ce projet, on peut parler de la possibilité d'importer et d'exporter des fichier qui n'a pas été explorée. Il y a aussi le peu de bonus, qui rend trop facile et trop facilement lassant le jeu. 
+
+## Ce que j'ai appris au cours de ce projet
+
+Ce projet constituait mon tout premier projet incluant du JavaScript, et j'ai donc énormément appris sur le language. J'ai appris à utiliser correctement des variables et des fonctions (et à les gérer par la suite), j'ai appris à faire des animations simbles, et à faire des éléments qui évoluent dans le temps, comme les compteurs et décomptes. Le projet m'a aussi permis de réviser le CSS. 
