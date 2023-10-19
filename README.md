@@ -20,7 +20,7 @@ Pour ce projet, l'utilisation du JavaScript était bien sûr obligatoire, et cel
 
 ## Points d'amélioration
 
-Dans ce projet, on peut parler de la possibilité d'importer et d'exporter des fichier qui n'a pas été explorée. Il y a aussi le peu de bonus, qui rend trop facile et trop facilement lassant le jeu. 
+Dans ce projet, on peut parler de la possibilité d'importer et d'exporter des fichier qui n'a pas été explorée. Il y a aussi le peu de bonus, qui rend trop facile et trop facilement lassant le jeu. Le décompte du MégaShark n'est pas non plus très beau visuellement, dans l'idéal, j'aurais aimé trouver une animation de timer qui dure 30 secondes et qui apparaisse au clic du bouton MegaShark, avant de disparaitre à la fin de la durée du bonus.
 
 ## Ce que j'ai appris au cours de ce projet
 
